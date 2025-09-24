@@ -11,6 +11,192 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
         .hero-bg {
-            background: linear-gradient(rg
-</head>
-</html>
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('logo.png');
+            background-size: cover;
+            background-position: center 70%;
+        }
+        .nav-link:hover {
+            color: #3b82f6;
+        }
+    </style>
+<body class="bg-gray-900 text-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 py-4 px-6 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-400 flex items-center">
+                <img src="logo.png" alt="Space-Verse Logo" class="mr-2 w-8 h-8 rounded-full inline-block align-middle"> Space-Verse
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-gray-300 hover:text-white font-medium">Home</a>
+                <a href="about.html" class="nav-link text-gray-300 hover:text-white font-medium">About</a>
+                <a href="disciplines.html" class="nav-link text-white font-medium">Disciplines</a>
+                <a href="opportunities.html" class="nav-link text-gray-300 hover:text-white font-medium">Opportunities</a>
+                <a href="resources.html" class="nav-link text-gray-300 hover:text-white font-medium">Resources</a>
+                <a href="scholarships.html" class="nav-link text-gray-300 hover:text-white font-medium">Scholarships</a>
+                <a href="deanslist.html" class="nav-link text-gray-300 hover:text-white font-medium">Dean's List</a>
+            </div>
+            <button class="md:hidden text-white">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-32 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white" data-aos="fade-up">Satellite Technology</h1>
+            <p class="text-xl text-blue-200" data-aos="fade-up" data-aos-delay="100">Connecting the world and exploring the universe through advanced engineering</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="md:col-span-2">
+                <h2 class="text-3xl font-bold mb-6 text-blue-400" data-aos="fade-up">About Satellite Technology</h2>
+                <p class="text-gray-300 mb-6 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                    Satellite technology is at the heart of modern communication, navigation, remote sensing, and scientific exploration. Satellites orbiting Earth and other planets provide vital data for weather forecasting, global positioning, environmental monitoring, and space research.
+                </p>
+                <p class="text-gray-300 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    The field encompasses the design, construction, launch, and operation of satellites, as well as the development of ground systems and data analysis techniques. Innovations in satellite technology drive progress in telecommunications, Earth observation, and interplanetary missions.
+                </p>
+                <h3 class="text-2xl font-bold mt-12 mb-6 text-blue-400" data-aos="fade-up">Key Applications</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-500 p-3 rounded-full mr-4">
+                                <i data-feather="wifi" class="text-white"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold">Telecommunications</h4>
+                        </div>
+                        <p class="text-gray-300">Satellites enable global communication networks, broadcasting, and internet access in remote areas.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-500 p-3 rounded-full mr-4">
+                                <i data-feather="navigation" class="text-white"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold">Navigation & GPS</h4>
+                        </div>
+                        <p class="text-gray-300">Satellite navigation systems provide precise location and timing information for transportation, mapping, and emergency response.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-500 p-3 rounded-full mr-4">
+                                <i data-feather="image" class="text-white"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold">Earth Observation</h4>
+                        </div>
+                        <p class="text-gray-300">Satellites monitor environmental changes, natural disasters, and resource management from space.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="400">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-500 p-3 rounded-full mr-4">
+                                <i data-feather="activity" class="text-white"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold">Space Exploration</h4>
+                        </div>
+                        <p class="text-gray-300">Satellites and probes explore other planets, moons, and deep space, expanding our understanding of the universe.</p>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <div class="bg-gray-800 p-6 rounded-xl sticky top-24">
+                    <h3 class="text-xl font-bold mb-4 text-blue-400">Quick Facts</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-feather="cpu" class="text-blue-400 mr-3 mt-1"></i>
+                            <span class="text-gray-300">Over 3,300 active satellites orbit Earth</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="navigation" class="text-blue-400 mr-3 mt-1"></i>
+                            <span class="text-gray-300">First artificial satellite: Sputnik 1 (1957)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="wifi" class="text-blue-400 mr-3 mt-1"></i>
+                            <span class="text-gray-300">Satellites provide internet to remote regions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="image" class="text-blue-400 mr-3 mt-1"></i>
+                            <span class="text-gray-300">Earth observation satellites track climate change</span>
+                        </li>
+                    </ul>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-blue-400">Related Resources</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-blue-400 hover:underline">NASA Satellite Missions</a></li>
+                        <li><a href="#" class="text-blue-400 hover:underline">ESA Earth Observation Portal</a></li>
+                        <li><a href="#" class="text-blue-400 hover:underline">International Space Station</a></li>
+                        <li><a href="#" class="text-blue-400 hover:underline">Satellite Industry Association</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notable Discoveries -->
+    <section class="py-16 px-6 bg-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center text-blue-400" data-aos="fade-up">Notable Achievements</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-700 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-300">Global Positioning System (GPS)</h3>
+                    <p class="text-gray-300 mb-4">A network of satellites providing precise location and timing for billions of devices worldwide.</p>
+                    <div class="flex items-center text-sm text-gray-400">
+                        <i data-feather="calendar" class="mr-2"></i>
+                        <span>Operational since 1978</span>
+                    </div>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-300">Weather Satellites</h3>
+                    <p class="text-gray-300 mb-4">Satellites monitor weather patterns, track storms, and provide data for climate research and forecasting.</p>
+                    <div class="flex items-center text-sm text-gray-400">
+                        <i data-feather="calendar" class="mr-2"></i>
+                        <span>First launched in 1960</span>
+                    </div>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-300">Mars Reconnaissance Orbiter</h3>
+                    <p class="text-gray-300 mb-4">A satellite studying Mars' atmosphere and surface, sending high-resolution images and data back to Earth.</p>
+                    <div class="flex items-center text-sm text-gray-400">
+                        <i data-feather="calendar" class="mr-2"></i>
+                        <span>Launched in 2005</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold text-blue-400 mb-4">Space-Verse</h3>
+                <p class="text-gray-300">Exploring the frontiers of space knowledge and research.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-blue-400 mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                    <li><a href="disciplines.html" class="text-gray-300 hover:text-white">Academic Disciplines</a></li>
+                    <li><a href="resources.html" class="text-gray-300 hover:text-white">Research Resources</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-blue-400 mb-4">Contact</h3>
+                <p class="text-gray-300">Email: contact@space-verse.edu</p>
+                <p class="text-gray-300">Phone: +1 (555) 123-4567</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-gray-300 hover:text-white"><i data-feather="twitter"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i data-feather="facebook"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i data-feather="linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2023 Space-Verse. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        AOS.init();
+        feather.replace();
+    </script>
