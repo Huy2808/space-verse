@@ -20,26 +20,30 @@
         }
     </style>
 <body class="bg-gray-900 text-gray-100 font-sans">
-    <!-- Navigation -->
-    <nav class="bg-gray-800 py-4 px-6 sticky top-0 z-50 shadow-lg">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-blue-400 flex items-center">
+    <!-- Navigation + Color Mode Toggle -->
+    <div class="w-full flex items-center justify-between bg-gray-800 py-4 px-6 sticky top-0 z-50 shadow-lg" style="position:relative;">
+        <nav class="flex items-center" style="height:48px;">
+            <a href="index.html" class="text-2xl font-bold text-blue-400 flex items-center mr-8">
                 <img src="logo.png" alt="Space-Verse Logo" class="mr-2 w-8 h-8 rounded-full inline-block align-middle"> Space-Verse
             </a>
             <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="nav-link text-gray-300 hover:text-white font-medium">Home</a>
+                <a href="index.html" class="nav-link text-white font-medium">Home</a>
                 <a href="about.html" class="nav-link text-gray-300 hover:text-white font-medium">About</a>
-                <a href="disciplines.html" class="nav-link text-white font-medium">Disciplines</a>
+                <a href="disciplines.html" class="nav-link text-gray-300 hover:text-white font-medium">Disciplines</a>
                 <a href="opportunities.html" class="nav-link text-gray-300 hover:text-white font-medium">Opportunities</a>
                 <a href="resources.html" class="nav-link text-gray-300 hover:text-white font-medium">Resources</a>
                 <a href="scholarships.html" class="nav-link text-gray-300 hover:text-white font-medium">Scholarships</a>
                 <a href="deanslist.html" class="nav-link text-gray-300 hover:text-white font-medium">Dean's List</a>
             </div>
-            <button class="md:hidden text-white">
+            <button class="md:hidden text-white ml-4">
                 <i data-feather="menu"></i>
             </button>
-        </div>
-    </nav>
+        </nav>
+        <button id="colorModeToggle" class="absolute top-4 right-8 bg-gray-700 text-white px-4 py-2 rounded-full shadow-lg z-50 transition-colors duration-300 flex items-center space-x-2" style="height:48px;">
+            <span id="colorModeIcon" class="inline-block"><i data-feather="moon"></i></span>
+            <span id="colorModeText" class="hidden md:inline">Dark Mode</span>
+        </button>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-bg py-32 px-4">
@@ -199,4 +203,35 @@
     <script>
         AOS.init();
         feather.replace();
+        // Color Mode Toggle Logic
+        const colorModeToggle = document.getElementById('colorModeToggle');
+        const colorModeIcon = document.getElementById('colorModeIcon');
+        const colorModeText = document.getElementById('colorModeText');
+        function setColorMode(mode) {
+            if (mode === 'dark') {
+                document.body.classList.add('bg-gray-900', 'text-gray-100');
+                document.body.classList.remove('bg-white', 'text-gray-900');
+                colorModeIcon.innerHTML = feather.icons['moon'].toSvg();
+                colorModeText.textContent = 'Dark Mode';
+            } else {
+                document.body.classList.add('bg-white', 'text-gray-900');
+                document.body.classList.remove('bg-gray-900', 'text-gray-100');
+                colorModeIcon.innerHTML = feather.icons['sun'].toSvg();
+                colorModeText.textContent = 'Bright Mode';
+            }
+        }
+        function getSavedColorMode() {
+            return localStorage.getItem('colorMode') || 'dark';
+        }
+        function saveColorMode(mode) {
+            localStorage.setItem('colorMode', mode);
+        }
+        colorModeToggle.addEventListener('click', () => {
+            const currentMode = getSavedColorMode();
+            const newMode = currentMode === 'dark' ? 'bright' : 'dark';
+            setColorMode(newMode);
+            saveColorMode(newMode);
+        });
+        // On page load
+        setColorMode(getSavedColorMode());
     </script>
