@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disciplines | Space-Verse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .discipline-icon {
+            width: 100px;
+            height: 100px;
+            background: #222;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            transition: background 0.2s;
+        }
+        .discipline-icon:hover {
+            background: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+    <nav class="bg-gray-800 py-4 px-6 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-400 flex items-center">
+                <i data-feather="globe" class="mr-2"></i> Space-Verse
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-gray-300 hover:text-white font-medium">Home</a>
+                <a href="about.html" class="nav-link text-gray-300 hover:text-white font-medium">About</a>
+                <a href="disciplines.html" class="nav-link text-white font-medium">Disciplines</a>
+                <a href="opportunities.html" class="nav-link text-gray-300 hover:text-white font-medium">Opportunities</a>
+                <a href="resources.html" class="nav-link text-gray-300 hover:text-white font-medium">Resources</a>
+                <a href="scholarships.html" class="nav-link text-gray-300 hover:text-white font-medium">Scholarships</a>
+                <a href="deanslist.html" class="nav-link text-gray-300 hover:text-white font-medium">Dean's List</a>
+            </div>
+            <button class="md:hidden text-white">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+    <section class="hero-bg py-24 px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white" data-aos="fade-up">Academic Disciplines</h1>
+            <p class="text-xl md:text-2xl mb-8 text-blue-200" data-aos="fade-up" data-aos-delay="100">Explore the fields that drive space science and discovery.</p>
+        </div>
+        <div class="max-w-5xl mx-auto mt-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                <a href="astronomy.html" class="block text-center group">
+                    <div class="discipline-icon"><i data-feather="star" style="width:48px;height:48px;"></i></div>
+                    <span class="text-lg font-semibold group-hover:text-blue-400">Astronomy / Astrophysics / Cosmology</span>
+                </a>
+                <a href="planetary.html" class="block text-center group">
+                    <div class="discipline-icon"><i data-feather="globe" style="width:48px;height:48px;"></i></div>
+                    <span class="text-lg font-semibold group-hover:text-blue-400">Earth & Planetary Science</span>
+                </a>
+                <a href="remotesensing.html" class="block text-center group">
+                    <div class="discipline-icon"><i data-feather="eye" style="width:48px;height:48px;"></i></div>
+                    <span class="text-lg font-semibold group-hover:text-blue-400">Remote Sensing</span>
+                </a>
+                <a href="satellite.html" class="block text-center group">
+                    <div class="discipline-icon"><i data-feather="cpu" style="width:48px;height:48px;"></i></div>
+                    <span class="text-lg font-semibold group-hover:text-blue-400">Satellite Technology</span>
+                </a>
+                <a href="particle.html" class="block text-center group">
+                    <div class="discipline-icon"><i data-feather="activity" style="width:48px;height:48px;"></i></div>
+                    <span class="text-lg font-semibold group-hover:text-blue-400">Particle Physics</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-800 py-8 px-6 mt-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold text-blue-400 mb-4">Space-Verse</h3>
+                <p class="text-gray-300">Exploring the frontiers of space knowledge and research.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-blue-400 mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                    <li><a href="disciplines.html" class="text-gray-300 hover:text-white">Academic Disciplines</a></li>
+                    <li><a href="resources.html" class="text-gray-300 hover:text-white">Research Resources</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-blue-400 mb-4">Contact</h3>
+                <p class="text-gray-300">Email: contact@space-verse.edu</p>
+                <p class="text-gray-300">Phone: +1 (555) 123-4567</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-gray-300 hover:text-white"><i data-feather="twitter"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i data-feather="facebook"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i data-feather="linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2023 Space-Verse. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        AOS.init();
+        feather.replace();
+    </script>
+</body>
+</html>
