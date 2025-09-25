@@ -9,21 +9,22 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="theme.css">
     <style>
         .discipline-icon {
             width: 100px;
             height: 100px;
-            background: #222;
+            background: var(--background-secondary);
             border-radius: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1rem auto;
             box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-            transition: background 0.2s;
+            transition: var(--transition-color);
         }
         .discipline-icon:hover {
-            background: #3b82f6;
+            background: var(--blue-primary);
         }
     </style>
 </head>
@@ -47,33 +48,37 @@
                 <i data-feather="menu"></i>
             </button>
         </nav>
+        <button id="colorModeToggle" class="absolute top-4 right-8 bg-gray-700 text-white px-4 py-2 rounded-full shadow-lg z-50 transition-colors duration-300 flex items-center space-x-2" style="height:48px;">
+            <span id="colorModeIcon" class="inline-block"><i data-feather="moon"></i></span>
+            <span id="colorModeText" class="hidden md:inline">Dark Mode</span>
+        </button>
     </div>
     <section class="hero-bg py-24 px-4">
         <div class="max-w-3xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white" data-aos="fade-up">Academic Disciplines</h1>
-            <p class="text-xl md:text-2xl mb-8 text-blue-200" data-aos="fade-up" data-aos-delay="100">Explore the fields that drive space science and discovery.</p>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white" data-aos="fade-up">Nghiên Cứu</h1>
+            <p class="text-xl md:text-2xl mb-8 text-blue-200 text-justify" data-aos="fade-up" data-aos-delay="100">Khoa "Khoa học Vũ trụ và Trái Đất" sở hữu những định hướng nghiên cứu đa dạng và phong phú, trải rộng từ nghiên cứu cơ bản đến ứng dụng, với mạng lưới hợp tác mở rộng từ lĩnh vực hạ nguyên tử (như neutrino) cho đến quy mô vĩ mô của Vũ trụ.</p>
         </div>
         <div class="max-w-5xl mx-auto mt-10">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 <a href="astronomy.html" class="block text-center group">
                     <div class="discipline-icon"><i data-feather="star" style="width:48px;height:48px;"></i></div>
-                    <span class="text-lg font-semibold group-hover:text-blue-400">Astronomy / Astrophysics / Cosmology</span>
+                    <span class="text-lg font-semibold group-hover:text-blue-400">Thiên văn học/ Vật lý thiên văn/ Vũ trụ học</span>
                 </a>
                 <a href="planetary.html" class="block text-center group">
                     <div class="discipline-icon"><i data-feather="globe" style="width:48px;height:48px;"></i></div>
-                    <span class="text-lg font-semibold group-hover:text-blue-400">Earth & Planetary Science</span>
+                    <span class="text-lg font-semibold group-hover:text-blue-400">Khoa học Hành tinh & Trái Đất</span>
                 </a>
                 <a href="remotesensing.html" class="block text-center group">
                     <div class="discipline-icon"><i data-feather="eye" style="width:48px;height:48px;"></i></div>
-                    <span class="text-lg font-semibold group-hover:text-blue-400">Remote Sensing</span>
+                    <span class="text-lg font-semibold group-hover:text-blue-400">Viễn Thám</span>
                 </a>
                 <a href="satellite.html" class="block text-center group">
                     <div class="discipline-icon"><i data-feather="cpu" style="width:48px;height:48px;"></i></div>
-                    <span class="text-lg font-semibold group-hover:text-blue-400">Satellite Technology</span>
+                    <span class="text-lg font-semibold group-hover:text-blue-400">Công nghệ Vệ tinh</span>
                 </a>
                 <a href="particle.html" class="block text-center group">
                     <div class="discipline-icon"><i data-feather="activity" style="width:48px;height:48px;"></i></div>
-                    <span class="text-lg font-semibold group-hover:text-blue-400">Particle Physics</span>
+                    <span class="text-lg font-semibold group-hover:text-blue-400">Vật lý Hạt </span>
                 </a>
             </div>
         </div>
@@ -107,111 +112,10 @@
             <p>&copy; 2023 Space-Verse. All rights reserved.</p>
         </div>
     </footer>
+    <script src="theme.js"></script>
     <script>
         AOS.init();
         feather.replace();
-        // Color Mode Toggle Logic
-        const colorModeToggle = document.getElementById('colorModeToggle');
-        const colorModeIcon = document.getElementById('colorModeIcon');
-        const colorModeText = document.getElementById('colorModeText');
-        function setColorMode(mode) {
-            const blueClasses = ['text-blue-400', 'bg-blue-400', 'text-blue-200', 'bg-blue-200'];
-            const elements = document.querySelectorAll('[class*="text-"], [class*="bg-"]');
-            
-            if (mode === 'dark') {
-                document.body.classList.add('bg-gray-900', 'text-gray-100');
-                document.body.classList.remove('bg-white', 'text-gray-900');
-                colorModeIcon.innerHTML = feather.icons['moon'].toSvg();
-                colorModeText.textContent = 'Dark Mode';
-                
-                elements.forEach(e => {
-                    if (!Array.from(e.classList).some(cls => blueClasses.includes(cls))) {
-                        // Background colors
-                        if (e.classList.contains('bg-white')) {
-                            e.classList.remove('bg-white');
-                            e.classList.add('bg-gray-900');
-                        }
-                        if (e.classList.contains('bg-gray-200')) {
-                            e.classList.remove('bg-gray-200');
-                            e.classList.add('bg-gray-800');
-                        }
-                        // Text colors
-                        if (e.classList.contains('text-gray-900')) {
-                            e.classList.remove('text-gray-900');
-                            e.classList.add('text-gray-100');
-                        }
-                        if (e.classList.contains('text-gray-700')) {
-                            e.classList.remove('text-gray-700');
-                            e.classList.add('text-gray-300');
-                        }
-                        if (e.classList.contains('text-gray-600')) {
-                            e.classList.remove('text-gray-600');
-                            e.classList.add('text-gray-400');
-                        }
-                    }
-                });
-
-                // Handle SVG icons
-                document.querySelectorAll('svg, i[data-feather]').forEach(e => {
-                    if (!e.closest('[class*="text-blue"]')) {
-                        e.style.color = '#f3f4f6'; // text-gray-100
-                    }
-                });
-            } else {
-                document.body.classList.add('bg-white', 'text-gray-900');
-                document.body.classList.remove('bg-gray-900', 'text-gray-100');
-                colorModeIcon.innerHTML = feather.icons['sun'].toSvg();
-                colorModeText.textContent = 'Bright Mode';
-                
-                elements.forEach(e => {
-                    if (!Array.from(e.classList).some(cls => blueClasses.includes(cls))) {
-                        // Background colors
-                        if (e.classList.contains('bg-gray-900')) {
-                            e.classList.remove('bg-gray-900');
-                            e.classList.add('bg-white');
-                        }
-                        if (e.classList.contains('bg-gray-800')) {
-                            e.classList.remove('bg-gray-800');
-                            e.classList.add('bg-gray-200');
-                        }
-                        // Text colors
-                        if (e.classList.contains('text-gray-100')) {
-                            e.classList.remove('text-gray-100');
-                            e.classList.add('text-gray-900');
-                        }
-                        if (e.classList.contains('text-gray-300')) {
-                            e.classList.remove('text-gray-300');
-                            e.classList.add('text-gray-700');
-                        }
-                        if (e.classList.contains('text-gray-400')) {
-                            e.classList.remove('text-gray-400');
-                            e.classList.add('text-gray-600');
-                        }
-                    }
-                });
-
-                // Handle SVG icons
-                document.querySelectorAll('svg, i[data-feather]').forEach(e => {
-                    if (!e.closest('[class*="text-blue"]')) {
-                        e.style.color = '#111827'; // text-gray-900
-                    }
-                });
-            }
-        }
-        function getSavedColorMode() {
-            return localStorage.getItem('colorMode') || 'dark';
-        }
-        function saveColorMode(mode) {
-            localStorage.setItem('colorMode', mode);
-        }
-        colorModeToggle.addEventListener('click', () => {
-            const currentMode = getSavedColorMode();
-            const newMode = currentMode === 'dark' ? 'bright' : 'dark';
-            setColorMode(newMode);
-            saveColorMode(newMode);
-        });
-        // On page load
-        setColorMode(getSavedColorMode());
     </script>
 </body>
 </html>

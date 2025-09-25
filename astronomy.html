@@ -9,14 +9,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="theme.css">
     <style>
         .hero-bg {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('horsehead.png');
             background-size: cover;
             background-position: center 30%;
-        }
-        .nav-link:hover {
-            color: #3b82f6;
         }
     </style>
 </head>
@@ -48,100 +46,191 @@
 
     <!-- Hero Section -->
     <section class="hero-bg py-32 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white" data-aos="fade-up">Astronomy</h1>
-            <p class="text-xl text-blue-200" data-aos="fade-up" data-aos-delay="100">The study of celestial objects and phenomena beyond Earth's atmosphere</p>
-        </div>
-    </section>
+  <div class="flex justify-center overflow-x-auto">
+    <h1 class="text-4xl md:text-6xl font-bold text-white whitespace-nowrap" data-aos="fade-up">
+      Thiên văn học/ Vật lý thiên văn/ Vũ trụ học
+    </h1>
+  </div>
+  <p class="text-xl text-blue-200 text-center mt-4" data-aos="fade-up" data-aos-delay="100">
+    Nghiên cứu về các thiên thể và hiện tượng ngoài Trái Đất
+  </p>
+</section>
+
 
     <!-- Content Section -->
     <section class="py-16 px-6 max-w-6xl mx-auto">
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="md:col-span-2">
-                <h2 class="text-3xl font-bold mb-6 text-blue-400" data-aos="fade-up">About Astronomy</h2>
+
+            <!-- Main Content (2 columns) -->
+            <div class="md:col-span-2 space-y-16">
+
+              <!-- Astronomy -->
+              <div data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-6 text-blue-400">Thiên văn học</h2>
                 <p class="text-gray-300 mb-6 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-                    Astronomy is one of the oldest natural sciences, dating back to antiquity with the observation of celestial bodies. 
-                    Modern astronomy includes the study of stars, galaxies, exoplanets, the interstellar medium, and the cosmic microwave 
-                    background. It addresses fundamental questions about the origin and evolution of the universe.
+                  Astronomy is one of the oldest natural sciences, dating back to antiquity with the observation of celestial bodies. 
+                  Modern astronomy includes the study of stars, galaxies, exoplanets, the interstellar medium, and the cosmic microwave 
+                  background. It addresses fundamental questions about the origin and evolution of the universe.
                 </p>
                 <p class="text-gray-300 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                    The field combines mathematics, physics, and chemistry to explain the nature of celestial objects and phenomena. 
-                    Major sub-disciplines include observational astronomy (using telescopes and other instruments to collect data) and 
-                    theoretical astronomy (developing models to explain observations).
+                  The field combines mathematics, physics, and chemistry to explain the nature of celestial objects and phenomena. 
+                  Major sub-disciplines include observational astronomy (using telescopes and other instruments to collect data) and 
+                  theoretical astronomy (developing models to explain observations).
                 </p>
-                
-                <h3 class="text-2xl font-bold mt-12 mb-6 text-blue-400" data-aos="fade-up">Key Research Areas</h3>
+
+                <h3 class="text-2xl font-bold mt-12 mb-6 text-blue-400" data-aos="fade-up">Các hướng nghiên cứu chính</h3>
+
+                <!-- Grid 2 columns for all cards -->
                 <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-blue-500 p-3 rounded-full mr-4">
-                                <i data-feather="sun" class="text-white"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold">Stellar Astronomy</h4>
-                        </div>
-                        <p class="text-gray-300">Study of stars, their formation, evolution, and eventual demise. Includes research on stellar classification, nucleosynthesis, and variable stars.</p>
+
+                  <!-- Stellar Astronomy -->
+                  <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                      <div class="bg-blue-500 p-3 rounded-full mr-4">
+                        <i data-feather="sun" class="text-white"></i>
+                      </div>
+                      <h4 class="text-xl font-semibold">Thiên văn vô tuyến</h4>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-blue-500 p-3 rounded-full mr-4">
-                                <i data-feather="globe" class="text-white"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold">Planetary Science</h4>
-                        </div>
-                        <p class="text-gray-300">Examination of planets, moons, and planetary systems, particularly those of the Solar System and the processes that form them.</p>
+                    <p class="text-gray-300 leading-relaxed">Vũ trụ luôn tràn ngập các tín hiệu vô tuyến yếu ớt, đây là cánh cửa mở ra việc nghiên cứu các quá trình vật lý quy mô lớn. Sóng vô tuyến thường sinh ra từ chuyển động của các electron tự do trong từ trường (bức xạ synchrotron), từ nguyên tử hydrogen trung tính (vạch 21 cm), hoặc từ các phân tử trong đám mây khí và bụi liên sao. Nhờ khả năng xuyên qua bụi, sóng vô tuyến giúp quan sát các chuẩn tinh, pulsar, tàn dư siêu tân tinh, và cấu trúc lớn của vũ trụ.</p>
+                  </div>
+
+                  <!-- Planetary Science -->
+                  <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                      <div class="bg-blue-500 p-3 rounded-full mr-4">
+                        <i data-feather="globe" class="text-white"></i>
+                      </div>
+                      <h4 class="text-xl font-semibold">Thiên văn hồng ngoại</h4>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-blue-500 p-3 rounded-full mr-4">
-                                <i data-feather="layers" class="text-white"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold">Galactic Astronomy</h4>
-                        </div>
-                        <p class="text-gray-300">Research on the structure and components of our galaxy and others, including the interstellar medium and star clusters.</p>
+                    <p class="text-gray-300 leading-relaxed">Mọi vật có nhiệt độ đều phát ra bức xạ hồng ngoại, giúp nhìn thấy các vật thể nguội hoặc bị che khuất bởi bụi vũ trụ, khó quan sát ở dải khả kiến. Các nguồn phát thường gặp gồm sao trẻ, các đám mây bụi, hành tinh ngoài Hệ Mặt Trời, và thiên hà ở giai đoạn sớm của vũ trụ.</p>
+                  </div>
+
+                  <!-- Galactic Astronomy -->
+                  <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                      <div class="bg-blue-500 p-3 rounded-full mr-4">
+                        <i data-feather="layers" class="text-white"></i>
+                      </div>
+                      <h4 class="text-xl font-semibold">Thiên văn dải khả kiến</h4>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="400">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-blue-500 p-3 rounded-full mr-4">
-                                <i data-feather="compass" class="text-white"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold">Cosmology</h4>
-                        </div>
-                        <p class="text-gray-300">Study of the universe as a whole, including its origin, evolution, and ultimate fate, through observations and theoretical models.</p>
+                    <p class="text-gray-300 leading-relaxed">Ánh sáng khả kiến đến từ phát xạ hoặc tán xạ photon ở bề mặt sao, các vạch phổ, và ánh sáng phản xạ bởi bụi. Quan sát dải này giúp nghiên cứu chi tiết cấu trúc sao, thiên hà, và đo đạc chính xác khoảng cách cũng như vận tốc qua phổ học.</p>
+                  </div>
+
+                  <!-- Ultraviolet Astronomy -->
+                  <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center mb-4">
+                      <div class="bg-blue-500 p-3 rounded-full mr-4">
+                        <i data-feather="compass" class="text-white"></i>
+                      </div>
+                      <h4 class="text-xl font-semibold">Thiên văn tia cực tím</h4>
                     </div>
+                    <p class="text-gray-300 leading-relaxed">Các ngôi sao nóng và vùng khí ion hóa mạnh tỏa ra bức xạ tử ngoại, giúp nghiên cứu môi trường năng lượng cao. Tia UV sinh ra khi electron tái kết hợp với ion hoặc khi nguyên tử bị kích thích ở nhiệt độ hàng chục nghìn Kelvin. Quan sát giúp phát hiện sao trẻ, vùng hình thành sao, đĩa bồi tụ quanh lỗ đen và thành phần hóa học của khí liên sao.</p>
+                  </div>
+
+                  <!-- X-ray Astronomy -->
+                  <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flex items-center mb-4">
+                      <div class="bg-blue-500 p-3 rounded-full mr-4">
+                        <i data-feather="activity" class="text-white"></i>
+                      </div>
+                      <h4 class="text-xl font-semibold">Thiên văn tia X</h4>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">Những hiện tượng vũ trụ cực đoan tạo ra tia X, mở ra thế giới vật lý năng lượng cao. Tia X hình thành khi vật chất bị gia tốc mạnh hoặc bị nung tới hàng triệu độ Kelvin, ví dụ đĩa bồi tụ quanh lỗ đen, sao neutron, siêu tân tinh hay plasma nóng trong cụm thiên hà. Quan sát giúp đo nhiệt độ, mật độ và trường từ.</p>
+                  </div>
+
+                  <!-- Gamma-ray Astronomy -->
+                  <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flex items-center mb-4">
+                      <div class="bg-blue-500 p-3 rounded-full mr-4">
+                        <i data-feather="zap" class="text-white"></i>
+                      </div>
+                      <h4 class="text-xl font-semibold">Thiên văn tia Gamma</h4>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">Tia gamma là bức xạ năng lượng cao nhất, sinh ra từ phản ứng hạt nhân, phân rã phóng xạ, va chạm hạt năng lượng cao, hoặc GRB và lỗ đen siêu khối lượng. Quan sát dải gamma giúp hiểu các môi trường khắc nghiệt như lỗ đen, siêu tân tinh, sao neutron.</p>
+                  </div>
+
+                  <!-- Neutrino Astronomy -->
+                  <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="700">
+                    <div class="flex items-center mb-4">
+                      <div class="bg-blue-500 p-3 rounded-full mr-4">
+                        <i data-feather="radio" class="text-white"></i>
+                      </div>
+                      <h4 class="text-xl font-semibold">Thiên văn Neutrino</h4>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">Neutrino sinh ra từ phản ứng hạt nhân trong lõi sao, siêu tân tinh, gần như không tương tác với vật chất, đi xuyên qua hành tinh. Đây là cánh cửa duy nhất nghe được thông điệp từ sâu bên trong các hiện tượng mà ánh sáng không thể thoát ra.</p>
+                  </div>
+
+                  <!-- Gravitational Wave Astronomy -->
+                  <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="800">
+                    <div class="flex items-center mb-4">
+                      <div class="bg-blue-500 p-3 rounded-full mr-4">
+                        <i data-feather="share-2" class="text-white"></i>
+                      </div>
+                      <h4 class="text-xl font-semibold">Thiên văn sóng hấp dẫn</h4>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">Quan sát sóng hấp dẫn giúp nghiên cứu các hiện tượng vũ trụ cực đoan như hợp nhất lỗ đen, sao neutron, mở ra kỷ nguyên mới trong thiên văn học.</p>
+                  </div>
+
                 </div>
+              </div>
+
+              <!-- Astrophysics -->
+              <div data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-6 text-blue-400">Vật lý thiên văn</h2>
+                <p class="text-gray-300 mb-6 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                  Vật lý thiên văn kết hợp toán học, vật lý, hóa học để nghiên cứu các vật thể và hiện tượng thiên văn, bao gồm sao, thiên hà, và hệ hành tinh.
+                </p>
+              </div>
+
+              <!-- Cosmology -->
+              <div data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-6 text-blue-400">Vũ trụ học</h2>
+                <p class="text-gray-300 mb-6 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                  Vũ trụ học nghiên cứu toàn bộ vũ trụ, bao gồm nguồn gốc, tiến hóa, và số phận cuối cùng thông qua quan sát và mô hình lý thuyết.
+                </p>
+              </div>
+
             </div>
-            
+
+            <!-- Sidebar (1 column) -->
             <div data-aos="fade-left">
-                <div class="bg-gray-800 p-6 rounded-xl sticky top-24">
-                    <h3 class="text-xl font-bold mb-4 text-blue-400">Quick Facts</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <i data-feather="clock" class="text-blue-400 mr-3 mt-1"></i>
-                            <span class="text-gray-300">Oldest science with roots in ancient civilizations</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="eye" class="text-blue-400 mr-3 mt-1"></i>
-                            <span class="text-gray-300">Hubble Space Telescope has made over 1.4 million observations since 1990</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="star" class="text-blue-400 mr-3 mt-1"></i>
-                            <span class="text-gray-300">Approximately 100 billion stars in our Milky Way galaxy</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="zap" class="text-blue-400 mr-3 mt-1"></i>
-                            <span class="text-gray-300">Neutron stars can rotate up to 700 times per second</span>
-                        </li>
-                    </ul>
-                    
-                    <h3 class="text-xl font-bold mt-8 mb-4 text-blue-400">Related Resources</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-blue-400 hover:underline">Astronomy Journal</a></li>
-                        <li><a href="#" class="text-blue-400 hover:underline">NASA Astrophysics Data System</a></li>
-                        <li><a href="#" class="text-blue-400 hover:underline">European Southern Observatory</a></li>
-                        <li><a href="#" class="text-blue-400 hover:underline">International Astronomical Union</a></li>
-                    </ul>
+                <div class="bg-gray-800 p-6 rounded-xl sticky top-24 space-y-8">
+                    <!-- Quick Facts -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-blue-400">Quick Facts</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i data-feather="clock" class="text-blue-400 mr-3 mt-1"></i>
+                                <span class="text-gray-300">Oldest science with roots in ancient civilizations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="eye" class="text-blue-400 mr-3 mt-1"></i>
+                                <span class="text-gray-300">Hubble Space Telescope has made over 1.4 million observations since 1990</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="star" class="text-blue-400 mr-3 mt-1"></i>
+                                <span class="text-gray-300">Approximately 100 billion stars in our Milky Way galaxy</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="zap" class="text-blue-400 mr-3 mt-1"></i>
+                                <span class="text-gray-300">Neutron stars can rotate up to 700 times per second</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Related Resources -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-blue-400">Related Resources</h3>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="text-blue-400 hover:underline">Astronomy Journal</a></li>
+                            <li><a href="#" class="text-blue-400 hover:underline">NASA Astrophysics Data System</a></li>
+                            <li><a href="#" class="text-blue-400 hover:underline">European Southern Observatory</a></li>
+                            <li><a href="#" class="text-blue-400 hover:underline">International Astronomical Union</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -209,60 +298,10 @@
         </div>
     </footer>
 
+    <script src="theme.js"></script>
     <script>
         AOS.init();
         feather.replace();
-        // Background toggle logic with persistence and full text color update
-        const toggleBtn = document.getElementById('toggle-bg');
-        let bright = localStorage.getItem('spaceverse_mode') === 'bright';
-        function setMode(brightMode) {
-            const navLinks = document.getElementById('nav-links').querySelectorAll('a');
-            if (brightMode) {
-                document.body.classList.remove('bg-gray-900', 'text-gray-100');
-                document.body.classList.add('bg-gray-50', 'text-gray-900');
-                toggleBtn.textContent = 'Dark Mode';
-                document.querySelectorAll('.bg-gray-800').forEach(e => {e.classList.remove('bg-gray-800'); e.classList.add('bg-gray-200');});
-                document.querySelectorAll('.hero-bg').forEach(e => {e.style.background = 'linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url(\'horsehead.png\')';});
-                navLinks.forEach(link => {
-                    link.classList.remove('text-white','text-gray-300');
-                    link.classList.add('text-gray-900');
-                });
-                document.querySelectorAll('.text-white').forEach(e => {e.classList.remove('text-white'); e.classList.add('text-gray-900');});
-                document.querySelectorAll('.text-gray-200').forEach(e => {e.classList.remove('text-gray-200'); e.classList.add('text-gray-800');});
-                document.querySelectorAll('.text-gray-300').forEach(e => {e.classList.remove('text-gray-300'); e.classList.add('text-gray-700');});
-                document.querySelectorAll('.text-blue-200').forEach(e => {e.classList.remove('text-blue-200'); e.classList.add('text-blue-700');});
-                document.querySelectorAll('.text-blue-400').forEach(e => {e.classList.remove('text-blue-400'); e.classList.add('text-blue-600');});
-                document.querySelectorAll('.text-blue-700').forEach(e => {e.classList.remove('text-blue-700'); e.classList.add('text-blue-900');});
-                document.querySelectorAll('svg, i[data-feather]').forEach(e => {e.style.color = '#1e293b';});
-            } else {
-                document.body.classList.remove('bg-gray-50', 'text-gray-900');
-                document.body.classList.add('bg-gray-900', 'text-gray-100');
-                toggleBtn.textContent = 'Bright Mode';
-                document.querySelectorAll('.bg-gray-200').forEach(e => {e.classList.remove('bg-gray-200'); e.classList.add('bg-gray-800');});
-                document.querySelectorAll('.hero-bg').forEach(e => {e.style.background = 'linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(\'horsehead.png\')';});
-                navLinks.forEach(link => {
-                    link.classList.remove('text-gray-900');
-                    if (link.href.endsWith('astronomy.html')) {
-                        link.classList.add('text-white');
-                    } else {
-                        link.classList.add('text-gray-300');
-                    }
-                });
-                document.querySelectorAll('.text-gray-800').forEach(e => {e.classList.remove('text-gray-800'); e.classList.add('text-gray-200');});
-                document.querySelectorAll('.text-gray-700').forEach(e => {e.classList.remove('text-gray-700'); e.classList.add('text-gray-300');});
-                document.querySelectorAll('.text-gray-900').forEach(e => {e.classList.remove('text-gray-900'); e.classList.add('text-white');});
-                document.querySelectorAll('.text-blue-600').forEach(e => {e.classList.remove('text-blue-600'); e.classList.add('text-blue-400');});
-                document.querySelectorAll('.text-blue-900').forEach(e => {e.classList.remove('text-blue-900'); e.classList.add('text-blue-700');});
-                document.querySelectorAll('.text-blue-700').forEach(e => {e.classList.remove('text-blue-700'); e.classList.add('text-blue-200');});
-                document.querySelectorAll('svg, i[data-feather]').forEach(e => {e.style.color = '#fff';});
-            }
-        }
-        setMode(bright);
-        toggleBtn.addEventListener('click', function() {
-            bright = !bright;
-            localStorage.setItem('spaceverse_mode', bright ? 'bright' : 'dark');
-            setMode(bright);
-        });
     </script>
 </body>
 </html>

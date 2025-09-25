@@ -9,14 +9,13 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="theme.css">
     <style>
+        /* Background and hover states */
         .hero-bg {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('background.jpg');
             background-size: cover;
             background-position: center;
-        }
-        .nav-link:hover {
-            color: #3b82f6;
         }
     </style>
 </head>
@@ -53,7 +52,7 @@
             <div class="flex flex-col items-center justify-center h-full text-center md:text-left">
                 <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white" data-aos="fade-up">Welcome to Space-Verse</h1>
                 <p class="text-xl md:text-2xl mb-8 text-blue-200" data-aos="fade-up" data-aos-delay="100">Tại đây chúng tôi chia sẻ một cách sâu sắc về sự phát triển và tiềm năng của lĩnh vực Vật lý Thiên văn, Vũ trụ học, Viễn thám, Khí hậu học, Công nghệ Vệ tinh tại Việt Nam và trên thế giới.</p>
-                <img src="logo.png" alt="Space-Verse Logo" class="w-48 h-48 rounded-full mx-auto md:mx-0 mb-4 shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+                <img src="logo.gif" alt="Space-Verse Logo" class="w-48 h-48 rounded-full mx-auto md:mx-0 mb-4 shadow-2xl" data-aos="fade-up" data-aos-delay="200">
             </div>
             <!-- Right: About Us -->
             <div class="bg-gray-800 rounded-xl p-8 shadow-lg flex flex-col justify-center h-full" data-aos="fade-left">
@@ -99,115 +98,10 @@
         </div>
     </footer>
 
+    <script src="theme.js"></script>
     <script>
+        // Initialize AOS and Feather icons
         AOS.init();
         feather.replace();
-        // Color Mode Toggle Logic
-        const colorModeToggle = document.getElementById('colorModeToggle');
-        const colorModeIcon = document.getElementById('colorModeIcon');
-        const colorModeText = document.getElementById('colorModeText');
-        
-        function setColorMode(mode) {
-            const blueClasses = ['text-blue-400', 'bg-blue-400', 'text-blue-200', 'bg-blue-200'];
-            const elements = document.querySelectorAll('[class*="text-"], [class*="bg-"]');
-            
-            if (mode === 'dark') {
-                document.body.classList.add('bg-gray-900', 'text-gray-100');
-                document.body.classList.remove('bg-white', 'text-gray-900');
-                colorModeIcon.innerHTML = feather.icons['moon'].toSvg();
-                colorModeText.textContent = 'Dark Mode';
-                
-                elements.forEach(e => {
-                    if (!Array.from(e.classList).some(cls => blueClasses.includes(cls))) {
-                        // Background colors
-                        if (e.classList.contains('bg-white')) {
-                            e.classList.remove('bg-white');
-                            e.classList.add('bg-gray-900');
-                        }
-                        if (e.classList.contains('bg-gray-200')) {
-                            e.classList.remove('bg-gray-200');
-                            e.classList.add('bg-gray-800');
-                        }
-                        // Text colors
-                        if (e.classList.contains('text-gray-900')) {
-                            e.classList.remove('text-gray-900');
-                            e.classList.add('text-gray-100');
-                        }
-                        if (e.classList.contains('text-gray-700')) {
-                            e.classList.remove('text-gray-700');
-                            e.classList.add('text-gray-300');
-                        }
-                        if (e.classList.contains('text-gray-600')) {
-                            e.classList.remove('text-gray-600');
-                            e.classList.add('text-gray-400');
-                        }
-                    }
-                });
-
-                // Handle SVG icons
-                document.querySelectorAll('svg, i[data-feather]').forEach(e => {
-                    if (!e.closest('[class*="text-blue"]')) {
-                        e.style.color = '#f3f4f6'; // text-gray-100
-                    }
-                });
-            } else {
-                document.body.classList.add('bg-white', 'text-gray-900');
-                document.body.classList.remove('bg-gray-900', 'text-gray-100');
-                colorModeIcon.innerHTML = feather.icons['sun'].toSvg();
-                colorModeText.textContent = 'Bright Mode';
-                
-                elements.forEach(e => {
-                    if (!Array.from(e.classList).some(cls => blueClasses.includes(cls))) {
-                        // Background colors
-                        if (e.classList.contains('bg-gray-900')) {
-                            e.classList.remove('bg-gray-900');
-                            e.classList.add('bg-white');
-                        }
-                        if (e.classList.contains('bg-gray-800')) {
-                            e.classList.remove('bg-gray-800');
-                            e.classList.add('bg-gray-200');
-                        }
-                        // Text colors
-                        if (e.classList.contains('text-gray-100')) {
-                            e.classList.remove('text-gray-100');
-                            e.classList.add('text-gray-900');
-                        }
-                        if (e.classList.contains('text-gray-300')) {
-                            e.classList.remove('text-gray-300');
-                            e.classList.add('text-gray-700');
-                        }
-                        if (e.classList.contains('text-gray-400')) {
-                            e.classList.remove('text-gray-400');
-                            e.classList.add('text-gray-600');
-                        }
-                    }
-                });
-
-                // Handle SVG icons
-                document.querySelectorAll('svg, i[data-feather]').forEach(e => {
-                    if (!e.closest('[class*="text-blue"]')) {
-                        e.style.color = '#111827'; // text-gray-900
-                    }
-                });
-            }
-        }
-
-        function getSavedColorMode() {
-            return localStorage.getItem('colorMode') || 'dark';
-        }
-
-        function saveColorMode(mode) {
-            localStorage.setItem('colorMode', mode);
-        }
-
-        colorModeToggle.addEventListener('click', () => {
-            const currentMode = getSavedColorMode();
-            const newMode = currentMode === 'dark' ? 'bright' : 'dark';
-            setColorMode(newMode);
-            saveColorMode(newMode);
-        });
-
-        // On page load
-        setColorMode(getSavedColorMode());
     </script>
 </html>
