@@ -1,15 +1,21 @@
 /* Theme System */
 :root {
-    /* Theme Colors */
+    /* Theme Colors - Dark Mode Default */
     --background-primary: var(--gray-900);
     --background-secondary: var(--gray-800);
+    --background-card: var(--gray-800);
     --text-primary: var(--gray-100);
     --text-secondary: var(--gray-300);
     --text-muted: var(--gray-400);
+    --link-color: var(--blue-light);
+    --link-hover: var(--blue-primary);
+    --hero-overlay: rgba(0, 0, 0, 0.5);
+    --card-shadow: rgba(0, 0, 0, 0.85);
     
     /* Fixed Colors */
     --blue-primary: #3b82f6;
     --blue-light: #93c5fd;
+    --blue-hover: #60a5fa;
     
     /* Gray Scale */
     --gray-100: #f3f4f6;
@@ -27,11 +33,15 @@
 
 [data-theme="bright"] {
     --background-primary: #ffffff;
-    --background-secondary: var(--gray-200);
+    --background-secondary: var(--gray-100);
+    --background-card: #ffffff;
     --text-primary: var(--gray-900);
-    --text-secondary: var(--gray-700);
+    --text-secondary: var(--gray-600);
     --text-muted: var(--gray-600);
-    --hero-overlay: rgba(255, 255, 255, 0.7);
+    --link-color: var(--blue-primary);
+    --link-hover: var(--blue-hover);
+    --hero-overlay: rgba(255, 255, 255, 0.25);
+    --card-shadow: rgba(0, 0, 0, 0.1);
 }
 
 /* Default dark theme overlay */
@@ -46,14 +56,87 @@ body {
     transition: var(--transition-color);
 }
 
-.bg-gray-800, .bg-gray-200 {
+/* Navigation and Header */
+.nav-link {
+    color: var(--text-secondary);
+    transition: var(--transition-color);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--text-primary);
+}
+
+/* Hero Section */
+.hero-bg {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--hero-overlay);
+    transition: background-color 0.3s ease;
+}
+
+.hero-bg > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Card and Box Components */
+.bg-gray-800 {
+    background-color: var(--background-card) !important;
+    transition: var(--transition-color);
+    box-shadow: 0 4px 6px var(--card-shadow);
+}
+
+/* Text Colors */
+.text-gray-100, 
+.text-gray-900 { 
+    color: var(--text-primary) !important;
+    transition: var(--transition-color);
+}
+
+.text-gray-300, 
+.text-gray-700 { 
+    color: var(--text-secondary) !important;
+    transition: var(--transition-color);
+}
+
+.text-gray-400, 
+.text-gray-600 { 
+    color: var(--text-muted) !important;
+    transition: var(--transition-color);
+}
+
+/* Links */
+.text-blue-400 {
+    color: var(--link-color) !important;
+    transition: var(--transition-color);
+}
+
+.hover\:text-blue-500:hover {
+    color: var(--link-hover) !important;
+}
+
+/* Buttons */
+.bg-gray-700 {
     background-color: var(--background-secondary) !important;
     transition: var(--transition-color);
 }
 
-.text-gray-100, .text-gray-900 { color: var(--text-primary) !important; }
-.text-gray-300, .text-gray-700 { color: var(--text-secondary) !important; }
-.text-gray-400, .text-gray-600 { color: var(--text-muted) !important; }
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    transition: var(--transition-color);
+}
 
 /* Keep blue colors consistent */
 .text-blue-400 { color: var(--blue-primary) !important; }

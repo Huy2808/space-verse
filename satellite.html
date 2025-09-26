@@ -12,9 +12,25 @@
     <link rel="stylesheet" href="theme.css">
     <style>
         .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('sat_tech.jpg');
+            background: url('sat_tech.jpg');
             background-size: cover;
             background-position: center 30%;
+            position: relative;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--hero-overlay);
+            opacity: 0.5;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
+        }
+        .hero-bg > * {
+            position: relative;
+            z-index: 1;
         }
         .nav-link:hover {
             color: #3b82f6;
@@ -35,9 +51,9 @@
                 <a href="resources.html" class="nav-link text-gray-300 hover:text-white font-medium">Resources</a>
                 <a href="scholarships.html" class="nav-link text-gray-300 hover:text-white font-medium">Scholarships</a>
                 <a href="deanslist.html" class="nav-link text-gray-300 hover:text-white font-medium">Dean's List</a>
-                <button id="themeToggle" class="p-2 text-white">
-                    <i data-feather="sun" class="hidden dark:block"></i>
-                    <i data-feather="moon" class="block dark:hidden"></i>
+                <button id="colorModeToggle" class="absolute top-4 right-8 bg-gray-700 text-white px-4 py-2 rounded-full shadow-lg z-50 transition-colors duration-300 flex items-center space-x-2" style="height:48px;">
+                    <span id="colorModeIcon" class="inline-block"><i data-feather="moon"></i></span>
+                    <span id="colorModeText" class="hidden md:inline">Dark Mode</span>
                 </button>
             </div>
             <button class="md:hidden text-white ml-4">

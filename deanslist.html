@@ -10,6 +10,28 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="theme.css">
+    <style>
+        .hero-bg {
+            background: url('mixed_bg.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--hero-overlay);
+            transition: background-color 0.3s ease;
+        }
+        .hero-bg > * {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans">
     <!-- Navigation + Color Mode Toggle -->
@@ -36,6 +58,14 @@
             <span id="colorModeText" class="hidden md:inline">Dark Mode</span>
         </button>
     </div>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-32 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white" data-aos="fade-up">Dean's List</h1>
+            <p class="text-xl text-blue-200" data-aos="fade-up" data-aos-delay="100">Recognizing academic excellence in space science</p>
+        </div>
+    </section>
     <section class="min-h-screen py-16 px-4">
         <div class="max-w-5xl mx-auto" data-aos="fade-up">
             <h1 class="text-4xl md:text-6xl font-bold mb-8 text-white text-center">Dean's List</h1>

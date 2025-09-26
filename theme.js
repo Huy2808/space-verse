@@ -29,12 +29,28 @@ const themeManager = {
     
     updateTextColors(theme) {
         // Update text colors based on theme
+        const isDark = theme === 'dark';
+        
+        // Update card backgrounds
+        document.querySelectorAll('.bg-gray-800').forEach(el => {
+            el.style.backgroundColor = `var(--background-card)`;
+            el.style.transition = 'var(--transition-color)';
+        });
+
+        // Update text colors
         document.querySelectorAll('.text-gray-100, .text-gray-900').forEach(el => {
             el.style.color = `var(--text-primary)`;
             el.style.transition = 'var(--transition-color)';
         });
+
         document.querySelectorAll('.text-gray-300, .text-gray-700').forEach(el => {
             el.style.color = `var(--text-secondary)`;
+            el.style.transition = 'var(--transition-color)';
+        });
+
+        // Update links
+        document.querySelectorAll('.text-blue-400').forEach(el => {
+            el.style.color = `var(--link-color)`;
             el.style.transition = 'var(--transition-color)';
         });
     },
