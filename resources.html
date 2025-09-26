@@ -8,6 +8,15 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="theme.css">
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('mixed_bg.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans">
     <!-- Navigation + Color Mode Toggle -->
@@ -34,7 +43,7 @@
             <span id="colorModeText" class="hidden md:inline">Dark Mode</span>
         </button>
     </div>
-    <section class="min-h-screen py-16 px-4">
+    <section class="hero-bg min-h-screen py-16 px-4">
         <div class="max-w-5xl mx-auto" data-aos="fade-up">
             <h1 class="text-4xl md:text-6xl font-bold mb-8 text-white text-center">Academic Resources</h1>
             <div class="grid md:grid-cols-2 gap-8">
@@ -121,26 +130,10 @@
             <p>&copy; 2023 Space-Verse. All rights reserved.</p>
         </div>
     </footer>
+    <script src="theme.js"></script>
     <script>
         AOS.init();
         feather.replace();
-        // Background toggle logic
-        const toggleBtn = document.getElementById('toggle-bg');
-        let bright = false;
-        toggleBtn.addEventListener('click', function() {
-            bright = !bright;
-            if (bright) {
-                document.body.classList.remove('bg-gray-900', 'text-gray-100');
-                document.body.classList.add('bg-gray-50', 'text-gray-900');
-                toggleBtn.textContent = 'Dark Mode';
-                document.querySelectorAll('.bg-gray-800').forEach(e => {e.classList.remove('bg-gray-800'); e.classList.add('bg-gray-200');});
-            } else {
-                document.body.classList.remove('bg-gray-50', 'text-gray-900');
-                document.body.classList.add('bg-gray-900', 'text-gray-100');
-                toggleBtn.textContent = 'Bright Mode';
-                document.querySelectorAll('.bg-gray-200').forEach(e => {e.classList.remove('bg-gray-200'); e.classList.add('bg-gray-800');});
-            }
-        });
     </script>
 </body>
 </html>

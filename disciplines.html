@@ -11,6 +11,26 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="theme.css">
     <style>
+        .hero-bg {
+            background: url('mixed_bg.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--hero-overlay);
+            transition: background-color 0.3s ease;
+        }
+        .hero-bg > * {
+            position: relative;
+            z-index: 1;
+        }
         .discipline-icon {
             width: 100px;
             height: 100px;

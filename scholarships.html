@@ -8,6 +8,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="theme.css">
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans">
     <!-- Navigation + Color Mode Toggle -->
@@ -131,58 +133,10 @@
             <p>&copy; 2023 Space-Verse. All rights reserved.</p>
         </div>
     </footer>
+    <script src="theme.js"></script>
     <script>
         AOS.init();
         feather.replace();
-        // Background toggle logic with persistence and full text color update
-        const toggleBtn = document.getElementById('toggle-bg');
-        let bright = localStorage.getItem('spaceverse_mode') === 'bright';
-        function setMode(brightMode) {
-            const navLinks = document.getElementById('nav-links').querySelectorAll('a');
-            if (brightMode) {
-                document.body.classList.remove('bg-gray-900', 'text-gray-100');
-                document.body.classList.add('bg-gray-50', 'text-gray-900');
-                toggleBtn.textContent = 'Dark Mode';
-                document.querySelectorAll('.bg-gray-800').forEach(e => {e.classList.remove('bg-gray-800'); e.classList.add('bg-gray-200');});
-                navLinks.forEach(link => {
-                    link.classList.remove('text-white','text-gray-300');
-                    link.classList.add('text-gray-900');
-                });
-                document.querySelectorAll('.text-white').forEach(e => {e.classList.remove('text-white'); e.classList.add('text-gray-900');});
-                document.querySelectorAll('.text-gray-200').forEach(e => {e.classList.remove('text-gray-200'); e.classList.add('text-gray-800');});
-                document.querySelectorAll('.text-gray-300').forEach(e => {e.classList.remove('text-gray-300'); e.classList.add('text-gray-700');});
-                document.querySelectorAll('.text-blue-200').forEach(e => {e.classList.remove('text-blue-200'); e.classList.add('text-blue-700');});
-                document.querySelectorAll('.text-blue-400').forEach(e => {e.classList.remove('text-blue-400'); e.classList.add('text-blue-600');});
-                document.querySelectorAll('.text-blue-700').forEach(e => {e.classList.remove('text-blue-700'); e.classList.add('text-blue-900');});
-                document.querySelectorAll('svg, i[data-feather]').forEach(e => {e.style.color = '#1e293b';});
-            } else {
-                document.body.classList.remove('bg-gray-50', 'text-gray-900');
-                document.body.classList.add('bg-gray-900', 'text-gray-100');
-                toggleBtn.textContent = 'Bright Mode';
-                document.querySelectorAll('.bg-gray-200').forEach(e => {e.classList.remove('bg-gray-200'); e.classList.add('bg-gray-800');});
-                navLinks.forEach(link => {
-                    link.classList.remove('text-gray-900');
-                    if (link.href.endsWith('scholarships.html')) {
-                        link.classList.add('text-white');
-                    } else {
-                        link.classList.add('text-gray-300');
-                    }
-                });
-                document.querySelectorAll('.text-gray-800').forEach(e => {e.classList.remove('text-gray-800'); e.classList.add('text-gray-200');});
-                document.querySelectorAll('.text-gray-700').forEach(e => {e.classList.remove('text-gray-700'); e.classList.add('text-gray-300');});
-                document.querySelectorAll('.text-gray-900').forEach(e => {e.classList.remove('text-gray-900'); e.classList.add('text-white');});
-                document.querySelectorAll('.text-blue-600').forEach(e => {e.classList.remove('text-blue-600'); e.classList.add('text-blue-400');});
-                document.querySelectorAll('.text-blue-900').forEach(e => {e.classList.remove('text-blue-900'); e.classList.add('text-blue-700');});
-                document.querySelectorAll('.text-blue-700').forEach(e => {e.classList.remove('text-blue-700'); e.classList.add('text-blue-200');});
-                document.querySelectorAll('svg, i[data-feather]').forEach(e => {e.style.color = '#fff';});
-            }
-        }
-        setMode(bright);
-        toggleBtn.addEventListener('click', function() {
-            bright = !bright;
-            localStorage.setItem('spaceverse_mode', bright ? 'bright' : 'dark');
-            setMode(bright);
-        });
     </script>
 </body>
 </html>

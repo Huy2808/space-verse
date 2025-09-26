@@ -9,11 +9,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="theme.css">
     <style>
         .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('logo.png');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('sat_tech.jpg');
             background-size: cover;
-            background-position: center 70%;
+            background-position: center 30%;
         }
         .nav-link:hover {
             color: #3b82f6;
@@ -34,15 +35,15 @@
                 <a href="resources.html" class="nav-link text-gray-300 hover:text-white font-medium">Resources</a>
                 <a href="scholarships.html" class="nav-link text-gray-300 hover:text-white font-medium">Scholarships</a>
                 <a href="deanslist.html" class="nav-link text-gray-300 hover:text-white font-medium">Dean's List</a>
+                <button id="themeToggle" class="p-2 text-white">
+                    <i data-feather="sun" class="hidden dark:block"></i>
+                    <i data-feather="moon" class="block dark:hidden"></i>
+                </button>
             </div>
             <button class="md:hidden text-white ml-4">
                 <i data-feather="menu"></i>
             </button>
         </nav>
-        <button id="colorModeToggle" class="absolute top-4 right-8 bg-gray-700 text-white px-4 py-2 rounded-full shadow-lg z-50 transition-colors duration-300 flex items-center space-x-2" style="height:48px;">
-            <span id="colorModeIcon" class="inline-block"><i data-feather="moon"></i></span>
-            <span id="colorModeText" class="hidden md:inline">Dark Mode</span>
-        </button>
     </div>
 
     <!-- Hero Section -->
@@ -203,35 +204,6 @@
     <script>
         AOS.init();
         feather.replace();
-        // Color Mode Toggle Logic
-        const colorModeToggle = document.getElementById('colorModeToggle');
-        const colorModeIcon = document.getElementById('colorModeIcon');
-        const colorModeText = document.getElementById('colorModeText');
-        function setColorMode(mode) {
-            if (mode === 'dark') {
-                document.body.classList.add('bg-gray-900', 'text-gray-100');
-                document.body.classList.remove('bg-white', 'text-gray-900');
-                colorModeIcon.innerHTML = feather.icons['moon'].toSvg();
-                colorModeText.textContent = 'Dark Mode';
-            } else {
-                document.body.classList.add('bg-white', 'text-gray-900');
-                document.body.classList.remove('bg-gray-900', 'text-gray-100');
-                colorModeIcon.innerHTML = feather.icons['sun'].toSvg();
-                colorModeText.textContent = 'Bright Mode';
-            }
-        }
-        function getSavedColorMode() {
-            return localStorage.getItem('colorMode') || 'dark';
-        }
-        function saveColorMode(mode) {
-            localStorage.setItem('colorMode', mode);
-        }
-        colorModeToggle.addEventListener('click', () => {
-            const currentMode = getSavedColorMode();
-            const newMode = currentMode === 'dark' ? 'bright' : 'dark';
-            setColorMode(newMode);
-            saveColorMode(newMode);
-        });
-        // On page load
-        setColorMode(getSavedColorMode());
+    </script>
+    <script src="theme.js"></script>
     </script>

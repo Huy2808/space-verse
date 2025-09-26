@@ -9,6 +9,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="theme.css">
     <style>
         .hero-bg {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('planet.jpg');
@@ -35,22 +36,22 @@
                 <a href="resources.html" class="nav-link text-gray-300 hover:text-white font-medium">Resources</a>
                 <a href="scholarships.html" class="nav-link text-gray-300 hover:text-white font-medium">Scholarships</a>
                 <a href="deanslist.html" class="nav-link text-gray-300 hover:text-white font-medium">Dean's List</a>
+                <button id="themeToggle" class="p-2 text-white">
+                    <i data-feather="sun" class="hidden dark:block"></i>
+                    <i data-feather="moon" class="block dark:hidden"></i>
+                </button>
             </div>
             <button class="md:hidden text-white ml-4">
                 <i data-feather="menu"></i>
             </button>
         </nav>
-        <button id="colorModeToggle" class="absolute top-4 right-8 bg-gray-700 text-white px-4 py-2 rounded-full shadow-lg z-50 transition-colors duration-300 flex items-center space-x-2" style="height:48px;">
-            <span id="colorModeIcon" class="inline-block"><i data-feather="moon"></i></span>
-            <span id="colorModeText" class="hidden md:inline">Dark Mode</span>
-        </button>
     </div>
 
     <!-- Hero Section -->
     <section class="hero-bg py-32 px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white" data-aos="fade-up">Planetary Science</h1>
-            <p class="text-xl text-blue-200" data-aos="fade-up" data-aos-delay="100">The study of planets, moons, and planetary systems</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white" data-aos="fade-up">Khoa học Hành tinh và Trái Đất</h1>
+            <p class="text-xl text-blue-200" data-aos="fade-up" data-aos-delay="100">Nghiên cứu về các hành tinh, mặt trăng, và chính Trái Đất của chúng ta</p>
         </div>
     </section>
 
@@ -58,20 +59,21 @@
     <section class="py-16 px-6 max-w-6xl mx-auto">
         <div class="grid md:grid-cols-3 gap-8">
             <div class="md:col-span-2">
-                <h2 class="text-3xl font-bold mb-6 text-blue-400" data-aos="fade-up">About Planetary Science</h2>
+                <h2 class="text-3xl font-bold mb-6 text-blue-400" data-aos="fade-up">về ngành Khoa học Hành tinh và Trái Đất</h2>
                 <p class="text-gray-300 mb-6 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-                    Planetary science is the scientific study of planets (including Earth), moons, and planetary systems, 
-                    in particular those of the Solar System and the processes that form them. It studies objects ranging 
-                    in size from micrometeoroids to gas giants, aiming to determine their composition, dynamics, formation, 
-                    interrelations, and history.
+                    Lĩnh vực Khoa học Trái Đất nghiên cứu Trái Đất như một hệ thống động lực phức tạp và mở rộng các nguyên lý đó để khám phá các thiên thể khác trong vũ trụ và từ đó chúng ta có thêm khoa học Hành tinh. 
+                    Trọng tâm là sự tương tác giữa các thành phần khí quyển, thủy quyển, sinh quyển và thạch quyển. Bạn sẽ đi sâu vào các chuyên ngành như địa vật lý, 
+                    hải dương học, khoa học khí quyển và địa chất hành tinh. Các kỹ năng cốt lõi được phát triển gồm phân tích hệ thống, mô hình hóa số và diễn giải dữ liệu đa ngành. 
+                    Đây là nền tảng để giải quyết các vấn đề cấp thiết như biến đổi khí hậu, quản lý tài nguyên bền vững, dự báo thiên tai và tìm kiếm dấu hiệu sự sống ngoài Trái Đất.
                 </p>
                 <p class="text-gray-300 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                    This interdisciplinary field combines aspects of astronomy, atmospheric science, geology, space physics, 
-                    chemistry, and biology. Planetary scientists work to understand how planetary systems form, how they work, 
-                    and how all the individual parts interact with each other as a system.
+                    Ở USTH, các bạn sẽ được học hai môn về về ngành này vào năm 2 và năm 3. Đây là hai môn rất thú vị, 
+                    không chỉ cung cấp cái nhìn toàn diện mà còn được giảng bằng cách thức khơi gợi sự tò mò của người học.
+                    Ngay cả với người không theo hướng Khoa học Trái Đất cũng có thể nhận thấy đây là một trong những môn hay 
+                    nhất trong chương trình cử nhân của USTH.
                 </p>
                 
-                <h3 class="text-2xl font-bold mt-12 mb-6 text-blue-400" data-aos="fade-up">Key Research Areas</h3>
+                <h3 class="text-2xl font-bold mt-12 mb-6 text-blue-400" data-aos="fade-up">Các hướng nghiên cứu chính</h3>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
                         <div class="flex items-center mb-4">
@@ -210,40 +212,11 @@
         </div>
     </footer>
 
+    <script src="theme.js"></script>
     <script>
         AOS.init();
         feather.replace();
-        // Color Mode Toggle Logic
-        const colorModeToggle = document.getElementById('colorModeToggle');
-        const colorModeIcon = document.getElementById('colorModeIcon');
-        const colorModeText = document.getElementById('colorModeText');
-        function setColorMode(mode) {
-            if (mode === 'dark') {
-                document.body.classList.add('bg-gray-900', 'text-gray-100');
-                document.body.classList.remove('bg-white', 'text-gray-900');
-                colorModeIcon.innerHTML = feather.icons['moon'].toSvg();
-                colorModeText.textContent = 'Dark Mode';
-            } else {
-                document.body.classList.add('bg-white', 'text-gray-900');
-                document.body.classList.remove('bg-gray-900', 'text-gray-100');
-                colorModeIcon.innerHTML = feather.icons['sun'].toSvg();
-                colorModeText.textContent = 'Bright Mode';
-            }
-        }
-        function getSavedColorMode() {
-            return localStorage.getItem('colorMode') || 'dark';
-        }
-        function saveColorMode(mode) {
-            localStorage.setItem('colorMode', mode);
-        }
-        colorModeToggle.addEventListener('click', () => {
-            const currentMode = getSavedColorMode();
-            const newMode = currentMode === 'dark' ? 'bright' : 'dark';
-            setColorMode(newMode);
-            saveColorMode(newMode);
-        });
-        // On page load
-        setColorMode(getSavedColorMode());
+        initializeTheme();
     </script>
 </body>
 </html>

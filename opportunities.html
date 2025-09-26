@@ -8,6 +8,15 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="theme.css">
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('mixed_bg.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans">
     <!-- Navigation + Color Mode Toggle -->
@@ -34,29 +43,48 @@
             <span id="colorModeText" class="hidden md:inline">Dark Mode</span>
         </button>
     </div>
-    <section class="min-h-screen py-16 px-4">
+    <section class="hero-bg min-h-screen py-16 px-4">
         <div class="max-w-5xl mx-auto" data-aos="fade-up">
-            <h1 class="text-4xl md:text-6xl font-bold mb-8 text-white text-center">Internship Opportunities</h1>
+            <h1 class="text-4xl md:text-6xl font-bold mb-8 text-white text-center">Cơ hội Thực tập</h1>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
-                    <h2 class="text-2xl font-bold text-blue-400 mb-4">Astronomy</h2>
+                    <h2 class="text-2xl font-bold text-blue-400 mb-4">Thiên văn học/ Vật lý thiên văn/ Vũ trụ học</h2>
                     <ul class="space-y-4">
                         <li>
-                            <span class="font-semibold">Astro Research Intern</span> <br>
-                            <span class="text-gray-300">Institution: Harvard-Smithsonian Center for Astrophysics</span><br>
-                            <span class="text-gray-300">Location: Cambridge, MA, USA</span><br>
-                            <span class="text-gray-300">Deadline: Nov 1, 2025</span>
+                            <span class="font-semibold">Summer Intern</span> <br>
+                            <span class="text-gray-300">Tổ chức: Academia Sinica Institute of Astronomy and Astrophysics</span><br>
+                            <span class="text-gray-300">Vị trí: Đài Bắc, Đài Loan</span><br>
+                            <a href="https://www.asiaa.sinica.edu.tw/outreach/summerstudent.php" class="text-blue-400 hover:underline">Link</a>
                         </li>
                         <li>
-                            <span class="font-semibold">Exoplanet Data Analyst</span> <br>
-                            <span class="text-gray-300">Institution: NASA Exoplanet Science Institute</span><br>
-                            <span class="text-gray-300">Location: Pasadena, CA, USA</span><br>
-                            <span class="text-gray-300">Deadline: Oct 15, 2025</span>
+                            <span class="font-semibold">Thực tập sinh</span> <br>
+                            <span class="text-gray-300">Tổ chức: AstroParticle and Cosmology Laboratory</span><br>
+                            <span class="text-gray-300">Vị trí: Paris, Pháp</span><br>
+                            <a href="https://apc.u-paris.fr/stages-proposes" class="text-blue-400 hover:underline">Link</a>
+                        </li>
+                        <li>
+                            <span class="font-semibold">Thực tập sinh</span> <br>
+                            <span class="text-gray-300">Tổ chức: Department of Physics, Vietnam National Space Center</span><br>
+                            <span class="text-gray-300">Vị trí: Hà Nội, Việt Nam</span><br>
+                            <a href="https://dap.vnsc.org.vn/" class="text-blue-400 hover:underline">Link</a>
+                        </li>
+                        <li>
+                            <span class="font-semibold">Thực tập sinh </span> <br>
+                            <span class="text-gray-300">Tổ chức: National Center for Theoretical Science</span><br>
+                            <span class="text-gray-300">Vị trí: Online/Đài Bắc, Đài Loan</span><br>
+                            <a href="https://nctstca.github.io/events/202507-tcassp/" class="text-blue-400 hover:underline">Link</a>
+                        </li>
+
+                        <li>
+                            <span class="font-semibold">Thực tập sinh</span> <br>
+                            <span class="text-gray-300">Tổ chức: Nicolaus Copernicus Astronomical Center</span><br>
+                            <span class="text-gray-300">Vị trí: Online/Ba Lan </span><br>
+                            <a href="https://camk.edu.pl/en/archiwum/2025/05/12/summer-student-program-2025/" class="text-blue-400 hover:underline">Link</a>
                         </li>
                     </ul>
                 </div>
                 <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
-                    <h2 class="text-2xl font-bold text-blue-400 mb-4">Planetary Science</h2>
+                    <h2 class="text-2xl font-bold text-blue-400 mb-4">Khoa học Hành tinh và Trái Đất</h2>
                     <ul class="space-y-4">
                         <li>
                             <span class="font-semibold">Mars Geology Intern</span> <br>
@@ -73,7 +101,7 @@
                     </ul>
                 </div>
                 <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
-                    <h2 class="text-2xl font-bold text-blue-400 mb-4">Remote Sensing</h2>
+                    <h2 class="text-2xl font-bold text-blue-400 mb-4">Viễn Thám</h2>
                     <ul class="space-y-4">
                         <li>
                             <span class="font-semibold">Earth Observation Intern</span> <br>
@@ -90,7 +118,7 @@
                     </ul>
                 </div>
                 <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
-                    <h2 class="text-2xl font-bold text-blue-400 mb-4">Satellite Technology</h2>
+                    <h2 class="text-2xl font-bold text-blue-400 mb-4">Công nghệ Vệ tinh</h2>
                     <ul class="space-y-4">
                         <li>
                             <span class="font-semibold">CubeSat Development Intern</span> <br>
@@ -107,19 +135,20 @@
                     </ul>
                 </div>
                 <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
-                    <h2 class="text-2xl font-bold text-blue-400 mb-4">Particle Physics</h2>
+                    <h2 class="text-2xl font-bold text-blue-400 mb-4">Vật lý Hạt</h2>
                     <ul class="space-y-4">
                         <li>
-                            <span class="font-semibold">Collider Physics Intern</span> <br>
-                            <span class="text-gray-300">Institution: CERN</span><br>
-                            <span class="text-gray-300">Location: Geneva, Switzerland</span><br>
-                            <span class="text-gray-300">Deadline: Dec 10, 2025</span>
+                            <span class="font-semibold">Intern</span> <br>
+                            <span class="text-gray-300">Tổ chức: Nhóm Neutrino, ICISE </span><br>
+                            <span class="text-gray-300">Vị trí: Quy Nhơn, Gia Lai, Việt Nam </span><br>
+                            <a href="https://ifirse.icise.vn/nugroup/internship/index.html" class="text-blue-400 hover:underline">Link</a>
                         </li>
+
                         <li>
-                            <span class="font-semibold">Neutrino Research Intern</span> <br>
-                            <span class="text-gray-300">Institution: Fermilab</span><br>
-                            <span class="text-gray-300">Location: Batavia, IL, USA</span><br>
-                            <span class="text-gray-300">Deadline: Nov 30, 2025</span>
+                            <span class="font-semibold">Intern</span> <br>
+                            <span class="text-gray-300">Tổ chức: AstroParticle and Cosmology Laboratory</span><br>
+                            <span class="text-gray-300">Vị trí: Paris, Pháp</span><br>
+                            <a href="https://apc.u-paris.fr/APC_CS/stages_proposes" class="text-blue-400 hover:underline">Link</a>
                         </li>
                     </ul>
                 </div>
@@ -131,58 +160,10 @@
             <p>&copy; 2023 Space-Verse. All rights reserved.</p>
         </div>
     </footer>
+    <script src="theme.js"></script>
     <script>
         AOS.init();
         feather.replace();
-        // Background toggle logic with persistence and full text color update
-        const toggleBtn = document.getElementById('toggle-bg');
-        let bright = localStorage.getItem('spaceverse_mode') === 'bright';
-        function setMode(brightMode) {
-            const navLinks = document.getElementById('nav-links').querySelectorAll('a');
-            if (brightMode) {
-                document.body.classList.remove('bg-gray-900', 'text-gray-100');
-                document.body.classList.add('bg-gray-50', 'text-gray-900');
-                toggleBtn.textContent = 'Dark Mode';
-                document.querySelectorAll('.bg-gray-800').forEach(e => {e.classList.remove('bg-gray-800'); e.classList.add('bg-gray-200');});
-                navLinks.forEach(link => {
-                    link.classList.remove('text-white','text-gray-300');
-                    link.classList.add('text-gray-900');
-                });
-                document.querySelectorAll('.text-white').forEach(e => {e.classList.remove('text-white'); e.classList.add('text-gray-900');});
-                document.querySelectorAll('.text-gray-200').forEach(e => {e.classList.remove('text-gray-200'); e.classList.add('text-gray-800');});
-                document.querySelectorAll('.text-gray-300').forEach(e => {e.classList.remove('text-gray-300'); e.classList.add('text-gray-700');});
-                document.querySelectorAll('.text-blue-200').forEach(e => {e.classList.remove('text-blue-200'); e.classList.add('text-blue-700');});
-                document.querySelectorAll('.text-blue-400').forEach(e => {e.classList.remove('text-blue-400'); e.classList.add('text-blue-600');});
-                document.querySelectorAll('.text-blue-700').forEach(e => {e.classList.remove('text-blue-700'); e.classList.add('text-blue-900');});
-                document.querySelectorAll('svg, i[data-feather]').forEach(e => {e.style.color = '#1e293b';});
-            } else {
-                document.body.classList.remove('bg-gray-50', 'text-gray-900');
-                document.body.classList.add('bg-gray-900', 'text-gray-100');
-                toggleBtn.textContent = 'Bright Mode';
-                document.querySelectorAll('.bg-gray-200').forEach(e => {e.classList.remove('bg-gray-200'); e.classList.add('bg-gray-800');});
-                navLinks.forEach(link => {
-                    link.classList.remove('text-gray-900');
-                    if (link.href.endsWith('opportunities.html')) {
-                        link.classList.add('text-white');
-                    } else {
-                        link.classList.add('text-gray-300');
-                    }
-                });
-                document.querySelectorAll('.text-gray-800').forEach(e => {e.classList.remove('text-gray-800'); e.classList.add('text-gray-200');});
-                document.querySelectorAll('.text-gray-700').forEach(e => {e.classList.remove('text-gray-700'); e.classList.add('text-gray-300');});
-                document.querySelectorAll('.text-gray-900').forEach(e => {e.classList.remove('text-gray-900'); e.classList.add('text-white');});
-                document.querySelectorAll('.text-blue-600').forEach(e => {e.classList.remove('text-blue-600'); e.classList.add('text-blue-400');});
-                document.querySelectorAll('.text-blue-900').forEach(e => {e.classList.remove('text-blue-900'); e.classList.add('text-blue-700');});
-                document.querySelectorAll('.text-blue-700').forEach(e => {e.classList.remove('text-blue-700'); e.classList.add('text-blue-200');});
-                document.querySelectorAll('svg, i[data-feather]').forEach(e => {e.style.color = '#fff';});
-            }
-        }
-        setMode(bright);
-        toggleBtn.addEventListener('click', function() {
-            bright = !bright;
-            localStorage.setItem('spaceverse_mode', bright ? 'bright' : 'dark');
-            setMode(bright);
-        });
     </script>
 </body>
 </html>
